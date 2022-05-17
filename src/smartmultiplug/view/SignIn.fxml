@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #D6ECFC;" stylesheets="@../styles/home.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartmultiplug.controller.SignInController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="paneLogIn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0">
+         <children>
+            <Label layoutX="87.0" layoutY="27.0" text="Smart Multiplug" textFill="#2e3130">
+               <font>
+                  <Font name="Bell MT" size="32.0" />
+               </font>
+            </Label>
+            <JFXButton cancelButton="true" ellipsisString="" layoutX="371.0" layoutY="1.0" onAction="#btnClose" prefHeight="26.0" prefWidth="0.0" ripplerFill="#9c9090" styleClass="hover-ash">
+               <graphic>
+                  <FontAwesomeIcon fill="#9ba5ae" iconName="CLOSE" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnMinimize" defaultButton="true" ellipsisString="" layoutX="341.0" layoutY="1.0" onAction="#btnMinimizeAction" prefHeight="26.0" prefWidth="0.0" ripplerFill="#9c9090" styleClass="hover-ash">
+               <graphic>
+                  <FontAwesomeIcon fill="#9ba5ae" iconName="MINUS" text="" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Text layoutX="88.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="92.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="txtPassword" layoutX="60.0" layoutY="380.0" onAction="#txtPasswordAction" prefHeight="26.0" prefWidth="278.0" promptText="Enter Password" />
+            <TextField fx:id="txtUserName" layoutX="60.0" layoutY="307.0" onAction="#txtUserNameAction" prefHeight="26.0" prefWidth="278.0" promptText="Enter User Name" />
+            <FontAwesomeIcon iconName="USER" layoutX="60.0" layoutY="300.0" size="2em" />
+            <FontAwesomeIcon iconName="EYE_SLASH" layoutX="57.0" layoutY="375.0" size="2em" />
+            <JFXButton fx:id="btnSignIn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="60.0" layoutY="497.0" onMouseClicked="#btnSignInMouseClicked" prefHeight="26.0" prefWidth="278.0" ripplerFill="#53aa25" style="-fx-background-color: #B1DC87;" text="Create Account">
+               <graphic>
+                  <FontAwesomeIcon iconName="USER_PLUS" size="2em" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="170.0" layoutY="66.0" text="Sign IN" textFill="#2e3130">
+               <font>
+                  <Font name="Agency FB" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="425.0" text="Confirm Password">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtConfirmPassword" layoutX="60.0" layoutY="445.0" onAction="#txtConfirmPasswordAction" onKeyReleased="#txtConfirmPasswordKeyRelease" prefHeight="26.0" prefWidth="278.0" promptText="Re-Enter Password" />
+            <FontAwesomeIcon fx:id="iconCheck" fill="#008a0b" iconName="CHECK_SQUARE_ALT" layoutX="347.0" layoutY="464.0" size="1.5em" visible="false" />
+            <JFXButton buttonType="RAISED" defaultButton="true" layoutX="107.0" layoutY="546.0" onMouseClicked="#btnLogInMouseClicked" prefHeight="32.0" prefWidth="182.0" style="-fx-background-color: #CDCDCD;" text="Have an Account LogIn" textAlignment="CENTER" wrapText="true" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="100.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/public_blue_users.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

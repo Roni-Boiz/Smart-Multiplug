@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="paneAbout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: transparent;" stylesheets="@../styles/home.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartmultiplug.controller.AboutController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="390.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="200.0">
+                     <children>
+                        <FontAwesomeIcon fill="#a908bf" iconName="PLUG" size="1.3em">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Label prefHeight="18.0" prefWidth="134.0" text="SMART MULTIPLUG" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" layoutX="213.0" prefHeight="26.0" prefWidth="177.0">
+                     <children>
+                        <JFXButton fx:id="btnMinimize" defaultButton="true" ellipsisString="" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnMinimizeAction" prefHeight="24.0" prefWidth="24.0" ripplerFill="#9c9090" styleClass="hover-ash">
+                           <graphic>
+                              <FontAwesomeIcon fill="#9ba5ae" iconName="MINUS" text="" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton cancelButton="true" ellipsisString="" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnClose" prefHeight="24.0" prefWidth="24.0" ripplerFill="#9c9090" styleClass="hover-ash">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIcon fill="#9ba5ae" iconName="CLOSE" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="390.0" style="-fx-background-color: #3e3e3e;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="390.0">
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" iconName="NAVICON" onMouseClicked="#imgDetailsMouseClicked" size="2em" styleClass="hover-ash">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontAwesomeIcon>
+                        <Label prefHeight="27.0" prefWidth="236.0" text="About" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="550.0" prefWidth="400.0">
+               <children>
+                  <Pane layoutX="41.0" layoutY="104.0" prefHeight="388.0" prefWidth="325.0">
+                     <children>
+                        <Label layoutX="28.0" layoutY="29.0" text="Product Version">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="46.0" text="JavaFX Smart Multiplug 1.0" />
+                        <Label layoutX="28.0" layoutY="82.0" text="Build Information">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="99.0" text="Version: 1.0" />
+                        <Label layoutX="28.0" layoutY="116.0" text="Date: 2019-05-15" />
+                        <Label layoutX="28.0" layoutY="133.0" text="Java Version: JDK 1.8 Oracle Corporation" />
+                        <Label layoutX="28.0" layoutY="172.0" text="Operating System">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="189.0" text="Windows 10, Linux Destro" />
+                        <Label layoutX="28.0" layoutY="300.0" text="Copyright (c) 2019">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="333.0" text="Design By">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="350.0" text="Don" />
+                        <Label layoutX="28.0" layoutY="227.0" text="User Directory">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="244.0" prefHeight="50.0" prefWidth="259.0" text="C:\Users\Ronila\AppData\Local\Temp\Smart Multiplug" wrapText="true" />
+                     </children>
+                  </Pane>
+                  <Label alignment="CENTER" layoutX="15.0" layoutY="45.0" prefHeight="50.0" prefWidth="369.0" style="-fx-border-color: black;" text="Smart Multiplug" textFill="#914abd">
+                     <font>
+                        <Font name="ROGFonts-Regular" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="149.0" layoutY="495.0" text="All Rights Reserved">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

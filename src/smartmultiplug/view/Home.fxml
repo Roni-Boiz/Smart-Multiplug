@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="paneHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: transparent;" stylesheets="@../styles/home.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartmultiplug.controller.HomeController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="390.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="186.0">
+                     <children>
+                        <FontAwesomeIcon fill="#a908bf" iconName="PLUG" size="1.3em">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Label prefHeight="18.0" prefWidth="134.0" text="SMART MULTIPLUG" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" layoutX="219.0" prefHeight="26.0" prefWidth="170.0">
+                     <children>
+                        <JFXButton fx:id="btnMinimize" defaultButton="true" ellipsisString="" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnMinimizeAction" prefHeight="24.0" prefWidth="24.0" ripplerFill="#9c9090" styleClass="hover-ash">
+                           <graphic>
+                              <FontAwesomeIcon fill="#9ba5ae" iconName="MINUS" text="" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton cancelButton="true" ellipsisString="" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnClose" prefHeight="24.0" prefWidth="24.0" ripplerFill="#9c9090" styleClass="hover-ash">
+                           <graphic>
+                              <FontAwesomeIcon fill="#9ba5ae" iconName="CLOSE" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Pane>
+            <HBox minHeight="-Infinity" prefHeight="50.0" prefWidth="390.0" style="-fx-background-color: #3e3e3e;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="218.0">
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" iconName="NAVICON" onMouseClicked="#imgDetailsMouseClicked" size="2em" styleClass="hover-ash">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Label prefHeight="27.0" prefWidth="169.0" text="Home" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <StackPane prefHeight="50.0" prefWidth="50.0" styleClass="hover-ash">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="BELL" size="2em" />
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" onMouseClicked="#settingsMouseClicked" prefHeight="50.0" prefWidth="50.0" styleClass="hover-ash">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="GEAR" size="2em" />
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="8.0" layoutY="10.0" onMouseClicked="#LogOutMouseClicked" prefHeight="50.0" prefWidth="50.0" styleClass="hover-ash">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="SIGN_OUT" size="2em" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <AnchorPane minHeight="-Infinity" prefHeight="515.0" prefWidth="390.0">
+               <children>
+                  <VBox prefHeight="517.0" prefWidth="390.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="107.0" prefWidth="390.0">
+                           <children>
+                              <ToggleButton fx:id="tgBtnConnect" layoutX="98.0" layoutY="71.0" mnemonicParsing="false" onAction="#tgBtnConnectAction" prefHeight="32.0" prefWidth="194.0" text="Connect">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ToggleButton>
+                              <ImageView fx:id="imgViewConnecting" fitHeight="66.0" fitWidth="236.0" layoutX="77.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../img/btle.gif" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgViewDisconnect" fitHeight="66.0" fitWidth="73.0" layoutX="162.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/bluetootOff.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <AnchorPane fx:id="paneSwitch" disable="true" prefHeight="408.0" prefWidth="390.0">
+                           <children>
+                              <VBox prefHeight="410.0" prefWidth="390.0">
+                                 <children>
+                                    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="390.0" style="-fx-border-color: black; -fx-border-width: 1px 0px 0px 0px;">
+                                       <children>
+                                          <Label layoutX="28.0" layoutY="14.0" text="Switch 1">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXToggleButton fx:id="tBtnSwitch1" contentDisplay="BOTTOM" layoutX="309.0" layoutY="14.0" onAction="#tBtnSwitch1Action" selected="true" text="OFF / ON">
+                                             <cursor>
+                                                <Cursor fx:constant="DEFAULT" />
+                                             </cursor>
+                                          </JFXToggleButton>
+                                          <Label layoutX="28.0" layoutY="41.0" prefHeight="19.0" prefWidth="104.0" text="Set Delay Time">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtTime1" layoutX="28.0" layoutY="62.0" onAction="#txtTime1Action" prefHeight="25.0" prefWidth="104.0" text="00:00:00" />
+                                          <Label fx:id="lblCountdown1" alignment="CENTER" layoutX="172.0" layoutY="21.0" prefHeight="27.0" prefWidth="104.0" />
+                                          <Button fx:id="btnStartCountdown1" defaultButton="true" layoutX="234.0" layoutY="62.0" mnemonicParsing="false" onAction="#btnStartCountdown1Action" prefHeight="25.0" prefWidth="66.0" text="Start">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                          <Button fx:id="btnResetCountdown1" defaultButton="true" disable="true" layoutX="149.0" layoutY="62.0" mnemonicParsing="false" onAction="#btnResetCountdown1Action" prefHeight="25.0" prefWidth="66.0" text="Reset">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="390.0" style="-fx-border-color: black; -fx-border-width: 1px 0px 0px 0px;">
+                                       <children>
+                                          <Label layoutX="28.0" layoutY="14.0" text="Switch 2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXToggleButton fx:id="tBtnSwitch2" contentDisplay="BOTTOM" layoutX="309.0" layoutY="14.0" onAction="#tBtnSwitch2Action" selected="true" text="OFF / ON">
+                                             <cursor>
+                                                <Cursor fx:constant="DEFAULT" />
+                                             </cursor>
+                                          </JFXToggleButton>
+                                          <Label layoutX="28.0" layoutY="43.0" prefHeight="19.0" prefWidth="97.0" text="Set Delay Time">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtTime2" layoutX="28.0" layoutY="64.0" onAction="#txtTime2Action" prefHeight="25.0" prefWidth="104.0" text="00:00:00" />
+                                          <Label fx:id="lblCountdown2" alignment="CENTER" layoutX="171.0" layoutY="21.0" prefHeight="27.0" prefWidth="104.0" />
+                                          <Button fx:id="btnStartCountdown2" defaultButton="true" layoutX="233.0" layoutY="64.0" mnemonicParsing="false" onAction="#btnStartCountdown2Action" prefHeight="25.0" prefWidth="66.0" text="Start">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                          <Button fx:id="btnResetCountdown2" defaultButton="true" disable="true" layoutX="148.0" layoutY="64.0" mnemonicParsing="false" onAction="#btnResetCountdown2Action" prefHeight="25.0" prefWidth="66.0" text="Reset">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="390.0" style="-fx-border-color: black; -fx-border-width: 1px 0px 0px 0px;">
+                                       <children>
+                                          <Label layoutX="28.0" layoutY="14.0" text="Switch 3">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXToggleButton fx:id="tBtnSwitch3" contentDisplay="BOTTOM" layoutX="309.0" layoutY="14.0" onAction="#tBtnSwitch3Action" selected="true" text="OFF / ON">
+                                             <cursor>
+                                                <Cursor fx:constant="DEFAULT" />
+                                             </cursor>
+                                          </JFXToggleButton>
+                                          <Label layoutX="28.0" layoutY="44.0" prefHeight="19.0" prefWidth="104.0" text="Set Delay Time">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtTime3" layoutX="28.0" layoutY="63.0" onAction="#txtTime3Action" prefHeight="25.0" prefWidth="104.0" text="00:00:00" />
+                                          <Label fx:id="lblCountdown3" alignment="CENTER" layoutX="171.0" layoutY="21.0" prefHeight="27.0" prefWidth="104.0" />
+                                          <Button fx:id="btnStartCountdown3" defaultButton="true" layoutX="231.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnStartCountdown3Action" prefHeight="25.0" prefWidth="66.0" text="Start">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                          <Button fx:id="btnResetCountdown3" defaultButton="true" disable="true" layoutX="148.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnResetCountdown3Action" prefHeight="25.0" prefWidth="66.0" text="Reset">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="390.0" style="-fx-border-color: black; -fx-border-width: 1px 0px 0px 0px;">
+                                       <children>
+                                          <Label layoutX="28.0" layoutY="14.0" text="Switch 4">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXToggleButton fx:id="tBtnSwitch4" contentDisplay="BOTTOM" layoutX="309.0" layoutY="14.0" onAction="#tBtnSwitch4Action" selected="true" text="OFF / ON">
+                                             <cursor>
+                                                <Cursor fx:constant="DEFAULT" />
+                                             </cursor>
+                                          </JFXToggleButton>
+                                          <Label layoutX="28.0" layoutY="44.0" prefHeight="19.0" prefWidth="104.0" text="Set Delay Time">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtTime4" layoutX="28.0" layoutY="63.0" onAction="#txtTime4Action" prefHeight="25.0" prefWidth="104.0" text="00:00:00" />
+                                          <Label fx:id="lblCountdown4" alignment="CENTER" layoutX="173.0" layoutY="20.0" prefHeight="27.0" prefWidth="104.0" />
+                                          <Button fx:id="btnStartCountdown4" defaultButton="true" layoutX="232.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnStartCountdown4Action" prefHeight="25.0" prefWidth="66.0" text="Start">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                          <Button fx:id="btnResetCountdown4" defaultButton="true" disable="true" layoutX="150.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnResetCountdown4Action" prefHeight="25.0" prefWidth="66.0" text="Reset">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

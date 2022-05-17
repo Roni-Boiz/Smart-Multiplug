@@ -1,0 +1,26 @@
+.hover-ash:hover{
+    -fx-background-color:#D3CFD3;
+     -fx-cursor: hand;
+}
+
+.hover-ash:hover TEXT{
+    -fx-fill:#B4AEB5 !important;
+}
+
+.hover-border-right:hover{
+    -fx-border-color: #0033ff;
+    -fx-border-width: 0px 4px 0px 0px; 
+}
+
+.cursor-hand{
+    -fx-cursor: hand;
+}
+
+.hover-dark-blue:hover{
+    -fx-background-color: #0000ff !important;
+}
+
+.hover-glow-gold:hover{
+    -fx-background-color: deeppink;
+    -fx-cursor: hand;
+}

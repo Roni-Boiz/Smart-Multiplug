@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="SmartMultiplug.jnlp">
+  <information>
+    <title>SmartMultiplug</title>
+    <vendor>Ronila</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="SmartMultiplug.jar" size="474527" download="eager" />
+    <jar href="lib\bluecove-2.1.1.jar" size="663800" download="eager" />
+    <jar href="lib\fontawesomefx-8.1.jar" size="179086" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2401594" download="eager" />
+    <jar href="lib\jssc-2.8.0.jar" size="153562" download="eager" />
+    <jar href="lib\microemulator-app-swing-2.0.0.jar" size="372231" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.15.jar" size="2134905" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="SmartMultiplug" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="smartmultiplug.main.SmartMultiplug"  name="SmartMultiplug" />
+  <update check="always"/>
+</jnlp>
