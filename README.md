@@ -63,7 +63,7 @@ Arduino code to turn on the switches are **a, b, c, d** bit patterns while to tu
 
 Update following values accordindly values you have used.
 
-### User Interfaces
+## User Interfaces
 
 ![1](https://github.com/user-attachments/assets/fa04975b-8145-4db0-824b-fda72fc6ff84)
 
